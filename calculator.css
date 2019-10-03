@@ -1,0 +1,98 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: monospace, sans-serif;
+}
+
+body {
+    padding: 10px;
+    margin: 10px;
+    background-color: #FFBB99;
+}
+h1 {
+    font-size: 37pt;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 25px;
+    color: white;
+    font-family: 'DM Serif Display', serif;
+
+}
+
+.calculator {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(80px, auto) repeat(5, 80px);
+}
+.button {
+    grid-column: span 1;
+    cursor: pointer;
+    border: 1px solid gray;
+    width: 80px;
+    height: 80px;
+    font-size: 2em;
+}
+
+.ctrl {
+    grid-column: span 1;
+    cursor: pointer;
+    border: 1px solid gray;
+    width: 80px;
+    height: 80px;
+    font-size: 2em;
+}
+
+
+.button:hover {
+    background-color: #374A2E;
+    color: white;
+}
+.button-wide {
+    grid-column: span 2;
+    cursor: pointer;
+    border: 1px solid gray;
+    width: 160px;
+    height: 80px;
+    font-size: 2em;
+}
+.ctrl-wide {
+    grid-column: span 2;
+    cursor: pointer;
+    border: 1px solid gray;
+    width: 160px;
+    height: 80px;
+    font-size: 2em;
+}
+.button-wide:hover {
+    background-color: black;
+    color: white;
+}
+
+.ctrl-wide:hover {
+    background-color: black;
+    color: white;
+}
+
+.ctrl:hover {
+    background-color: #374A2E;
+    color: white;
+}
+.input {
+    grid-column: 1 / -1;
+    background-color: #374A2E;
+    color: white;
+    height: 100px;
+    border: 1px solid gray;
+    cursor: text;
+    display: flex;
+    text-align-last: right;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-size: 2em;
+    padding: 15px;
+
+}
